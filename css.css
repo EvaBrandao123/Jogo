@@ -1,0 +1,196 @@
+body{
+    background: linear-gradient(to right, midnightblue, firebrick, springgreen);
+    
+}
+
+@keyframes background{
+    0%{
+        background-position-x: 0%;
+    }
+    100%{
+        background-position-x: 100%;
+    }
+}
+
+h1{
+    color: white;
+    font-size: 70px;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+header{
+    color: white;
+    background-color:rgb(79, 6, 76);
+   height:60px;
+   width:99%;
+   align-items: center;
+   justify-content: center;
+   display: flex;
+   font-size:20px;
+   font-family: sans-serif;
+   border-radius:20px;
+   position: absolute;
+   box-shadow:0px 0px 10px rgb(0, 90, 112);
+}
+#time{
+    color: rgb(10, 67, 67);
+    margin-left:-80%;
+    font-size:45px;
+    position: absolute;
+}
+#score{
+    text-align: center;
+    border-radius:10px;
+    color: rgb(31, 39, 18);
+    position: absolute;
+    animation:ann 3s infinite;
+}
+@keyframes ann {
+    0%{
+        color: rgb(94, 125, 100);
+    }
+    50%{
+        color:orangered;
+        text-shadow:0 0 10px white;
+         transform: scale(1.7);
+    }
+    100%{
+        color:rgb(255, 0, 230);
+      
+    }
+}
+#nome{
+    margin-left:70%;
+}
+
+main{
+
+    display: flex;
+    width:100%;
+    background-color:transparent;
+    min-height: 95vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteudo{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:10px;
+    width:100%;
+    margin:0 auto;
+    max-width:600px;
+}
+
+
+
+.cartas{
+position: relative;
+background: rgb(120, 3, 128);
+width: 101%;
+aspect-ratio:3/4;
+transition:all 400ms ease;
+transform-style: preserve-3d;
+border-radius:30px;
+}
+
+.face{ 
+width:100%;
+height:100%;
+border-radius:30px;
+position:absolute; 
+transition: all 400ms ease;
+}
+
+.frente{
+   background-color:blue;
+   background-position:center;
+   background-size: cover;
+   border:3px solid rgb(136, 34, 136);
+}
+
+.atras{
+    border:3px solid rgb(136, 34, 136);
+background-position: center;
+background-size: cover;
+backface-visibility:hidden;
+background:linear-gradient(45deg,rgb(38, 0, 94),rgb(136, 34, 136))no-repeat;
+
+}
+.atras:hover{
+box-shadow:0px 0px 10px rgb(102, 0, 255);
+transform: scale(1.1);
+}
+
+
+.virarCarta{
+      transform:rotateY(180deg);
+}
+
+
+.desativarCarta{
+    filter: saturate(0);
+    opacity:0.5;
+}
+
+
+
+
+
+
+.bola{
+    width: 100px;
+    height: 100px;
+    background: white;
+    position: absolute;
+    margin-left:70%;
+    border-radius:100px;
+    animation:6s ani infinite;
+}
+.s2{
+    width: 50px;
+    height:50px;
+}
+.s1{
+    width: 30px;
+    height:30px;
+    margin-left:-70%;
+}
+.s3{
+    width: 80px;
+    height:80px;
+    margin-left:-90%;
+    margin-top:30%;
+}
+.s4{
+    width: 200px;
+    height:200px;
+    margin-left:-100%;
+    margin-top:-10%;
+}
+
+
+@keyframes ani {
+    0%{
+        transform:translateY(100px);
+        background-color: rgb(1, 9, 33);
+        box-shadow:0 0 10px rgb(255, 0, 0);
+    }
+    50%{
+        transform: scale(1.7);
+        background-color: rgb(251, 0, 255);
+        box-shadow:0 0 10px rgb(255, 0, 234);
+    }
+    100%{
+        transform: translateY(-100px);
+        box-shadow:0 0 10px rgb(0, 247, 255);
+        background-color: rgb(1, 9, 33);
+    }
+}
+
+
+
+
+
